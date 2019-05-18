@@ -15,7 +15,7 @@ namespace Tests
         public void WagonR_Is_Not_A_Sedan_And_Has_4_Seats()
         {
             int carMileage = 13;
-            Car wagonR = new WagonR(carMileage);
+            ICar wagonR = new WagonR(carMileage);
 
             string expectedMileage = $"{carMileage} kmpl";
             
@@ -26,7 +26,7 @@ namespace Tests
         public void WagonR_Is_Not_A_Sedan_And_Has_4_Seats_Print()
         {
             int carMileage = 13;
-            Car wagonR = new WagonR(carMileage);
+            ICar wagonR = new WagonR(carMileage);
 
             string expectedOutput = $"A {CarType.WagonR} is not a Sedan, is 4 - seater, and has a mileage of around {carMileage} kmpl.";
 
@@ -38,7 +38,7 @@ namespace Tests
         public void HondaCity_Is_A_Sedan_And_Has_4_Seats()
         {
             int carMileage = 20;
-            Car hondaCity = new HondaCity(carMileage);
+            ICar hondaCity = new HondaCity(carMileage);
 
             string expectedMileage = $"{carMileage} kmpl";
             
@@ -49,7 +49,7 @@ namespace Tests
         public void HondaCity_Is_A_Sedan_And_Has_4_Seats_Print()
         {
             int carMileage = 20;
-            Car hondaCity = new HondaCity(carMileage);
+            ICar hondaCity = new HondaCity(carMileage);
             
             string expectedOutput = $"A {CarType.HondaCity} is a Sedan, is 4 - seater, and has a mileage of around {carMileage} kmpl.";
 
@@ -60,7 +60,7 @@ namespace Tests
         public void InnovaCrysta_Is_Not_A_Sedan_And_Has_6_Seats()
         {
             int carMileage = 12;
-            Car innovaCrysta = new InnovaCrysta(carMileage);
+            ICar innovaCrysta = new InnovaCrysta(carMileage);
 
             string expectedMileage = $"{carMileage} kmpl";           
 
@@ -71,7 +71,7 @@ namespace Tests
         public void InnovaCrysta_Is_Not_A_Sedan_And_Has_6_Seats_Print()
         {
             int carMileage = 12;
-            Car innovaCrysta = new InnovaCrysta(carMileage);
+            ICar innovaCrysta = new InnovaCrysta(carMileage);
             
             string expectedOutput = $"A {CarType.InnovaCrysta} is not a Sedan, is 6 - seater, and has a mileage of around {carMileage} kmpl.";
             

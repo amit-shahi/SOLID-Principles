@@ -5,7 +5,7 @@ using static System.Console;
 
 namespace Car_Inheritance
 {
-    public abstract class Car
+    public abstract class Car : ICar
     {
         protected bool _isSedan;
         protected string _noOfSeats;
@@ -38,7 +38,7 @@ namespace Car_Inheritance
         // print method that returns expected output
         // If we let derived class to Print() output, they could mismatch
         // so, it's better to have Print() in this abstract class
-        
+
         public string Print(CarType carType)
         {
             string isSedan = (GetIsSedan() == true) ? "a" : "not a";

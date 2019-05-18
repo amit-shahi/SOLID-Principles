@@ -99,15 +99,15 @@ namespace Car_Inheritance
                     switch (carType)
                     {
                         case 0:
-                            Car wagonR = new WagonR(carMileage);
+                            ICar wagonR = new WagonR(carMileage);
                             WriteLine(wagonR.Print(CarType.WagonR));
                             break;
                         case 1:
-                            Car hondaCity = new HondaCity(carMileage);
+                            ICar hondaCity = new HondaCity(carMileage);
                             WriteLine(hondaCity.Print(CarType.HondaCity));
                             break;
                         case 2:
-                            Car innovaCrysta = new InnovaCrysta(carMileage);
+                            ICar innovaCrysta = new InnovaCrysta(carMileage);
                             WriteLine(innovaCrysta.Print(CarType.InnovaCrysta));
                             break;
 
