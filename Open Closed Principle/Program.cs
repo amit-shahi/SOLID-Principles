@@ -106,27 +106,12 @@ namespace Open_Closed_Principle
 
             Order orders = new Order();
 
-           // Wrong way
+            // Wrong way
             decimal calc1 = orders.CalculatePrice(1000, new Customer() { ID=1, Name="Simon", Membership = MembershipType.Standard });
 
 
             decimal calc2 = orders.CalculatePrice(1000, new Customer() { ID=1, Name="David", Membership = MembershipType.Premium });
-
-
-            // Correct Way
-
-            // decimal calc1 = new StandardMembership().CalculatePrice(1000);
-            
-            // decimal calc2 = new PremiumMembership().CalculatePrice(1000);
-
-            // decimal calc3 = new GoldMembership().CalculatePrice(1000);
-
-            //  var order1 = new Order(){ CustomerId = 1, CustomerName="Simon", OrderId=1001};
-
-            //  decimal calc1 = order1.CalculatePrice(1000 , new StandardMembership());
-            
-            
-
+ 
             WriteLine();
 
             WriteLine(" Wrong way - Tightly Coupled - Hard to add new Membership Type in future");
@@ -137,6 +122,15 @@ namespace Open_Closed_Principle
             WriteLine($" Premium Customer Id# 2 has paid ${ calc2.ToString("#.##") } of $1000 with 10% discount. ");
             WriteLine();
 
+
+            // Correct Way
+
+            // decimal calc1 = new StandardMembership().CalculatePrice(1000);
+            
+            // decimal calc2 = new PremiumMembership().CalculatePrice(1000);
+
+            // decimal calc3 = new GoldMembership().CalculatePrice(1000);
+ 
             // WriteLine($" Standard Customer Id# {order1.CustomerId} has paid ${ calc1.ToString("#.##") } of $1000 with no discount.");
             // WriteLine(" Extended functionality using Open-Closed principle");
             // WriteLine(" --------------------------------------------------");
