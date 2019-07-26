@@ -17,7 +17,6 @@ namespace ConsoleApp
     {
         public Sum(int[] numbers) : base(numbers)
         {
-            _numbers = numbers;
         }
 
         public override int Calc() => _numbers.Sum();
